@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   width: 15rem;
-  padding: 1rem;
+  padding:0.1rem;
   /* background: fixed; */
   border-radius: 20px;
   justify-content:flex-end;
