@@ -17,10 +17,9 @@ body {
   flex-direction: column;
   justify-items: flex-end;
   align-items: flex-end;
-  /* margin-top: rem; */
   gap: 0.2rem;
   min-width: 320px;
-  /* padding-right: 0.1rem; */
+  padding-right: 0.1rem;
   opacity: 0.8;
   color: #050419;
 }
@@ -32,11 +31,11 @@ body {
   flex-direction: column-reverse;
   width: 10rem;
   padding:0.1rem;
-  /* background: fixed; */
   border-radius: 20px;
   justify-content:flex-end;
   justify-items: flex-end;
   align-items:flex-end;
+  font-size: 1rem;
 }
 
 .container {
