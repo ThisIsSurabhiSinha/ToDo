@@ -9,6 +9,7 @@ body {
   gap: 1.5rem;
   position: relative;
   background-color: #aecbd3;
+
 }
 
 #time-date {
@@ -16,10 +17,10 @@ body {
   flex-direction: column;
   justify-items: flex-end;
   align-items: flex-end;
-  margin-top: 1rem;
-  gap: 0.5rem;
+  /* margin-top: rem; */
+  gap: 0.2rem;
   min-width: 320px;
-  padding-right: 1rem;
+  padding-right: 0.1rem;
   opacity: 0.8;
   color: #050419;
 }
@@ -30,8 +31,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   width: 15rem;
-  padding: 1rem;
-  background: fixed;
+  /* padding: 1rem; */
+  /* background: fixed; */
   border-radius: 20px;
   justify-content: center;
   justify-items: center;
@@ -45,8 +46,8 @@ body {
   justify-items: center;
   align-items: center;
   min-width: 320px;
-  padding: 1.3rem;
-  gap: 0.8rem;
+  padding: 1.13rem;
+  gap: 0.5rem;
   max-height: 75vh;
   overflow-y: scroll;
   box-shadow: 5px 10px 15px rgb(0, 0, 0), 2px 2px 15px rgb(139, 143, 143) inset;
@@ -64,7 +65,7 @@ body {
 }
 
 header {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: caption;
   font-family: fantasy;
   letter-spacing: 0.1rem;
@@ -73,7 +74,7 @@ header {
 }
 
 #L {
-  font-size: 3rem;
+  font-size: 2.85rem;
   font-weight: bold;
   margin-right: 0.25rem;
   font-family: fantasy;
@@ -83,10 +84,10 @@ header {
 }
 
 header i {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   padding: 0.5rem;
   vertical-align: middle;
-  margin-right: rem;
+  /* margin-right: rem; */
   color: #443bc7;
 }
 
@@ -98,7 +99,7 @@ header i {
   background-color: #7bc9ff;
   width: 100%;
   border-radius: 0.3rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,7 +112,7 @@ header i {
 
 .addTask i {
   margin-right: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   cursor: pointer;
   border-radius: 50%;
   background-color: #02060d;
@@ -124,8 +125,8 @@ header i {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-top: 1rem;
-  gap: 0.8rem;
+  margin-top: 0.6rem;
+  gap: 0.6rem;
   width: 100%;
 }
 
@@ -138,7 +139,7 @@ header i {
   flex-direction: column;
   justify-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.35rem;
   align-items: flex-start;
   gap: 0.5rem;
   border-radius: 0.5rem;
@@ -146,7 +147,7 @@ header i {
 }
 
 .task-number {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bolder;
 }
 
@@ -157,7 +158,7 @@ header i {
   flex-direction: row;
   justify-content: space-between;
   color: rgb(86, 84, 84);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .Completed {
@@ -171,7 +172,7 @@ header i {
 }
 
 .task-descp {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -180,7 +181,7 @@ header i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .fa-circle-check {
@@ -218,7 +219,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 
 form {
@@ -270,6 +271,6 @@ form {
 }
 @media only screen and (min-width: 600px) {
   .container {
-    width: 35rem;
+    width: 30rem;
   }
 }
