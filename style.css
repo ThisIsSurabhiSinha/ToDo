@@ -30,7 +30,7 @@ body {
   font-style: italic;
   display: flex;
   flex-direction: column-reverse;
-  width: 15rem;
+  width: 10rem;
   padding:0.1rem;
   /* background: fixed; */
   border-radius: 20px;
@@ -219,7 +219,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 form {
