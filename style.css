@@ -5,16 +5,10 @@
 }
 
 body {
-  
-  /* background: linear-gradient(to bottom,  rgba(11, 6, 44, 1), rgba(11, 6, 44, 1));  */
-  /* background-color: rgba(11, 6, 44, 1); */
   display: grid;
   gap: 1.5rem;
   position: relative;
   background-color: #aecbd3;
-  background-color: rgba(11, 6, 44, 1);
-  background-color: #aecbd3;
-  
 }
 
 #time-date {
@@ -25,42 +19,27 @@ body {
   margin-top: 1rem;
   gap: 0.5rem;
   min-width: 320px;
-  padding-right:1rem;
+  padding-right: 1rem;
   opacity: 0.8;
-  /* color: #7bc9ff; */
-  /* color:#a8c2f5; */
   color: #050419;
-
-  
-
 }
 
-
-#time-date div{
-    /* border-radius: 50% 50% 50% 50%; */
-    font-weight: bolder;
-    font-style: italic;
-    display: flex;
-    flex-direction: column-reverse;
-    width:15rem;;
-    padding:1rem;
-    background: fixed;
-    border-radius: 20px;
-    /* background: linear-gradient(to left, rgba(11, 6, 44, 0.8),rgba(25, 5, 95, 0.9)); */
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    /* box-shadow: 2px 2px 3px 5px rgb(102, 104, 104) inset; */
-
-
-
+#time-date div {
+  font-weight: bolder;
+  font-style: italic;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 15rem;
+  padding: 1rem;
+  background: fixed;
+  border-radius: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .container {
   background-color: rgba(255, 255, 255, 1);
-  /* background-color:  rgba(219, 205, 205, 0.906) ;
-  border: 0.4rem solid #1c1678; */
-  /* border: 0.2rem solid rgba(15, 1, 73, 0.728); */
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -69,68 +48,51 @@ body {
   padding: 1.3rem;
   gap: 0.8rem;
   max-height: 75vh;
-  overflow-y:scroll;
-  /* box-shadow: 5px 10px 15px rgb(61, 128, 130) ,2px 2px 15px rgb(99, 167, 169) inset ; */
-  box-shadow: 5px 10px 15px rgb(0, 0, 0) ,2px 2px 15px rgb(139, 143, 143) inset ;
+  overflow-y: scroll;
+  box-shadow: 5px 10px 15px rgb(0, 0, 0), 2px 2px 15px rgb(139, 143, 143) inset;
   border-radius: 0.7rem;
   opacity: 1;
-
 }
 
 .container::-webkit-scrollbar {
-    display: none;
-  }
-  
-.container{
-    -ms-overflow-style: none;  
-    scrollbar-width: none;  
-  }
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 header {
-  /* font-size: 2rem; */
   font-size: 2.5rem;
-  color: #050419; 
   font-weight: caption;
   font-family: fantasy;
   letter-spacing: 0.1rem;
-  color: #443bc7;
-  color:rgb(244, 99, 46);
+  color: rgb(244, 99, 46);
   width: 100%;
 }
 
 #L {
-  /* font-size: 2.5rem; Change as needed */
-  font-size: 3rem; /* Change as needed */
-  color: #443bc7; /* Change as needed */
+  font-size: 3rem;
   font-weight: bold;
   margin-right: 0.25rem;
   font-family: fantasy;
   vertical-align: middle;
   color: #443bc7;
-  color:coral;
   color: rgb(244, 99, 46);
-  
 }
-
-
-
 
 header i {
   font-size: 2.5rem;
   padding: 0.5rem;
-  vertical-align:middle;
-
-  margin-right: rem;;
+  vertical-align: middle;
+  margin-right: rem;
   color: #443bc7;
-
 }
 
 #ease {
-  vertical-align:text-top;
-
+  vertical-align: text-top;
 }
-
-
 
 .addTask {
   background-color: #7bc9ff;
@@ -163,127 +125,116 @@ header i {
   justify-items: center;
   align-items: center;
   margin-top: 1rem;
-  gap: 0.8em;
+  gap: 0.8rem;
   width: 100%;
 }
 
 .task-1 {
   background-color: #bfdff590;
-  /* border: 0.3rem solid #1c1678; */
   border: 0.2rem solid rgba(15, 1, 73, 0.728);
   width: 100%;
   min-height: 9rem;
   display: flex;
   flex-direction: column;
-  justify-items:center;
-  justify-content:space-between ;
+  justify-items: center;
+  justify-content: space-between;
   padding: 0.5rem;
   align-items: flex-start;
-  gap:0.5rem;
-  /* box-shadow: 1px 1px 5px rgb(63, 59, 59); */
+  gap: 0.5rem;
   border-radius: 0.5rem;
   position: relative;
 }
 
-.task-number{
-
-    font-size:1.5rem;
-    font-weight:bolder;
+.task-number {
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
-.date-status{
-    width:100%;
-    font-weight: 600;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between; 
-    color:rgb(86, 84, 84);
-    font-size: 1.1rem;
-
+.date-status {
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(86, 84, 84);
+  font-size: 1.1rem;
 }
 
-.Completed{
-  color:green;
-  font-weight: bold;
-  
-}
-
-.Overdue{
-  color:rgb(173, 79, 13);
+.Completed {
+  color: green;
   font-weight: bold;
 }
 
-.task-descp{
-    font-size: 1.2rem;
-    font-weight: bold;
+.Overdue {
+  color: rgb(173, 79, 13);
+  font-weight: bold;
 }
 
-.options{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 2rem;
+.task-descp {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.fa-circle-check{
-    color:green;
-    cursor:pointer;
-    z-index: 1;
-    
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2rem;
 }
 
-.fa-circle-check:hover{
-    color:rgb(51, 93, 10)
+.fa-circle-check {
+  color: green;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.fa-pen-to-square{
-    color:blue;
-    cursor:pointer;
-    z-index: 1;
+.fa-circle-check:hover {
+  color: rgb(51, 93, 10);
 }
 
-
-.fa-pen-to-square:hover{
-    color: rgb(38, 94, 94);
+.fa-pen-to-square {
+  color: blue;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.fa-trash{
-    color:red;
-    cursor:pointer;
-    z-index: 1;
+.fa-pen-to-square:hover {
+  color: rgb(38, 94, 94);
 }
 
-.fa-trash:hover{
+.fa-trash {
+  color: red;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.fa-trash:hover {
   color: brown;
-
 }
-footer{
-    width:100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight:bold;
-    font-size: 1.3rem;
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-
-
-form{
+form {
   background-color: black;
   opacity: 0.8;
 }
 
-.modal-body{
-
-  /* background-color:rgb(24, 75, 86) ; */
-  background-color:rgb(24, 105, 123) ;
-  color:rgb(255, 255, 255);
+.modal-body {
+  background-color: rgb(24, 105, 123);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
-
 }
 
-#textarea,#textInput,#dateInput{
+#textarea,
+#textInput,
+#dateInput {
   font-weight: bold;
 }
 
@@ -296,9 +247,8 @@ form{
   overflow: hidden;
   width: 0;
   height: 100%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0.8;
-
 }
 
 .container::selection.overlay {
@@ -317,10 +267,9 @@ form{
   -ms-transform: translate(-50%, -50%);
   visibility: visible;
   font-weight: bolder;
- 
 }
 @media only screen and (min-width: 600px) {
-  .container{
-      width:35rem;
+  .container {
+    width: 35rem;
   }
 }

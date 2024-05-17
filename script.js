@@ -10,15 +10,13 @@ let date = document.querySelector("#date");
 let time = document.querySelector("#time");
 let add = document.querySelector("#add");
 let closeBtn = document.querySelector("#closeBtn");
-let pending_num=document.querySelector(".pending-num");
-let finished_num=document.querySelector(".finished-num");
+let pending_num = document.querySelector(".pending-num");
+let finished_num = document.querySelector(".finished-num");
 let allTasks = [];
 
-
-let closeToSubmit=()=>{
-  closeBtn.addEventListener("click",
-      addingTask);
-  }
+let closeToSubmit = () => {
+  closeBtn.addEventListener("click", addingTask);
+};
 
 let resetForm = () => {
   textInput.value = "";
@@ -26,22 +24,21 @@ let resetForm = () => {
   taskDescp.value = "";
 };
 
-
 let updateFinished = () => {
   let completedTasks = allTasks.filter((task) => task.status === "Completed");
   finished.innerText = completedTasks.length;
 };
 
 let updatePending = () => {
-  let pendingTasks = allTasks.filter((task) => task.status === "Pending" || task.status === "Overdue" );
+  let pendingTasks = allTasks.filter(
+    (task) => task.status === "Pending" || task.status === "Overdue"
+  );
   pending.innerText = pendingTasks.length;
 };
 
-
 let finishedTask = (e) => {
-
   parent = e.parentElement.parentElement;
-  allTasks[parent.id].status="Completed";
+  allTasks[parent.id].status = "Completed";
   currStatus = parent.querySelector(".status");
   currStatus.className = "";
   currStatus.classList.add("status");
@@ -50,7 +47,6 @@ let finishedTask = (e) => {
 
   updateFinished();
   updatePending();
-
 };
 
 let updateTotal = () => {
@@ -60,7 +56,11 @@ let updateTotal = () => {
 let calculateTaskStatus = () => {
   const today = new Date();
   allTasks.forEach((task) => {
-    if (task.dueDate !== "" && task.dueDate !== null && task.status!=="Completed") {
+    if (
+      task.dueDate !== "" &&
+      task.dueDate !== null &&
+      task.status !== "Completed"
+    ) {
       let dateString = task.dueDate;
       let parts = dateString.split("-");
       let date = new Date(parts[0], parts[1] - 1, parts[2]);
@@ -75,15 +75,14 @@ let calculateTaskStatus = () => {
 };
 
 let deleteTask = (e) => {
-   e.parentElement.parentElement.remove();
-  allTasks.splice(   e.parentElement.parentElement.id, 1);
+  e.parentElement.parentElement.remove();
+  allTasks.splice(e.parentElement.parentElement.id, 1);
   updateTotal();
   updateFinished();
   updatePending();
 };
 
 let editTask = (e) => {
-  
   parent = e.parentElement.parentElement;
   let currTextInput = parent.querySelector(".task-number").innerText;
   let currDueDate = parent.querySelector(".dueDate").innerText;
@@ -99,9 +98,7 @@ let editTask = (e) => {
   updatePending();
 };
 
-
 let displayTask = () => {
-
   calculateTaskStatus();
   updateTotal();
   updatePending();
@@ -131,10 +128,7 @@ let displayTask = () => {
   });
 };
 
-
-
 let storeData = () => {
-
   newTask = {
     status: "Pending",
     dueDate: dueDate.value,
@@ -147,43 +141,32 @@ let storeData = () => {
   resetForm();
 };
 
-
-let addingTask=()=>{
-
- // e.preventDefault();
- closeBtn.removeEventListener("click",addingTask);
- storeData();
- add.setAttribute("data-bs-dismiss", "modal");
- add.click();
- (() => {
-   add.setAttribute("data-bs-dismiss", "");
- })();
-}
+let addingTask = () => {
+  closeBtn.removeEventListener("click", addingTask);
+  storeData();
+  add.setAttribute("data-bs-dismiss", "modal");
+  add.click();
+  (() => {
+    add.setAttribute("data-bs-dismiss", "");
+  })();
+};
 
 form.addEventListener("submit", (e) => {
-
   e.preventDefault();
-  // closeBtn.removeEventListener("click",noEdit);
-  closeBtn.setAttribute("type","button");
-  // storeData();
-  // add.setAttribute("data-bs-dismiss", "modal");
-  // add.click();
-  // (() => {
-  //   add.setAttribute("data-bs-dismiss", "");
-  // })();
+  closeBtn.setAttribute("type", "button");
   addingTask();
 });
 
 function updateClock() {
   let now = new Date();
 
-  let hours = now.getHours().toString().padStart(2,"0");
+  let hours = now.getHours().toString().padStart(2, "0");
   let minutes = now.getMinutes().toString().padStart(2, "0");
   let seconds = now.getSeconds().toString().padStart(2, "0");
 
   let amPM = hours >= 12 ? "PM" : "AM";
   hours = hours % 12 || 12; // Convert 24-hour time to 12-hour time
-  hours=hours.toString().padStart(2,"0");
+  hours = hours.toString().padStart(2, "0");
 
   let month = (now.getMonth() + 1).toString().padStart(2, "0"); // Month is 0-indexed
   let day = now.getDate().toString().padStart(2, "0");
@@ -207,7 +190,6 @@ function saveArrayToLocalStorage() {
   localStorage.setItem("allTasks", JSON.stringify(allTasks));
 }
 
-// Attach the save function to the beforeunload event
 window.addEventListener("beforeunload", saveArrayToLocalStorage);
 window.addEventListener("load", () => {
   updateClock();
