@@ -29,13 +29,13 @@ body {
   font-style: italic;
   display: flex;
   flex-direction: column-reverse;
-  width: 10rem;
-  padding:0.1rem;
+  width: 12rem;
+  padding:0.3rem;
   border-radius: 20px;
   justify-content:flex-end;
   justify-items: flex-end;
   align-items:flex-end;
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 
 .container {
